@@ -1,5 +1,5 @@
 {
-  "name": "Sv1fT/exchange1c",
+  "name": "sv1ft/exchange1c",
   "type": "library",
   "description": "Catalog Loader from 1c - CommerceML protocol",
   "keywords": [
@@ -29,8 +29,8 @@
   },
   "require": {
     "php": ">=7.1",
-    "carono/commerceml": "^0.2.3"
-
+    "carono/commerceml": "^0.2.3",
+    "ext-simplexml": "*"
   },
   "require-dev": {
     "phpunit/phpunit": "^7",

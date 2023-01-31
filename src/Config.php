@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 declare(strict_types=1);
 
-namespace Bigperson\Exchange1C;
+namespace Sv1fT\Exchange1C;
 
 /**
  * Class Config.
@@ -48,9 +48,9 @@ class Config
      * @var array
      */
     private $models = [
-        \Bigperson\Exchange1C\Interfaces\GroupInterface::class   => null,
-        \Bigperson\Exchange1C\Interfaces\ProductInterface::class => null,
-        \Bigperson\Exchange1C\Interfaces\OfferInterface::class   => null,
+        \Sv1fT\Exchange1C\Interfaces\GroupInterface::class   => null,
+        \Sv1fT\Exchange1C\Interfaces\ProductInterface::class => null,
+        \Sv1fT\Exchange1C\Interfaces\OfferInterface::class   => null,
     ];
 
     /**

@@ -1,15 +1,15 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 declare(strict_types=1);
 
-namespace Bigperson\Exchange1C\Events;
+namespace Sv1fT\Exchange1C\Events;
 
-use Bigperson\Exchange1C\Interfaces\OfferInterface;
+use Sv1fT\Exchange1C\Interfaces\OfferInterface;
 use Zenwalker\CommerceML\Model\Offer;
 
 class BeforeUpdateOffer extends AbstractEventInterface

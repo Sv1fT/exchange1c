@@ -1,13 +1,13 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 declare(strict_types=1);
 
-namespace Bigperson\Exchange1C\Services;
+namespace Sv1fT\Exchange1C\Services;
 
 /**
  * Class Catalog
@@ -104,7 +104,7 @@ class CatalogService extends AbstractService
 
         $response = "success\n";
         $response .= "laravel_session\n";
-        $response .= $this->request->getSession()->getId()."\n";
+        $response .= $this->request->session()->getId()."\n";
         $response .= 'timestamp='.time();
 
         return $response;

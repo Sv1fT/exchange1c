@@ -1,24 +1,24 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 declare(strict_types=1);
 
-namespace Bigperson\Exchange1C\Services;
+namespace Sv1fT\Exchange1C\Services;
 
-use Bigperson\Exchange1C\Config;
-use Bigperson\Exchange1C\Events\AfterProductsSync;
-use Bigperson\Exchange1C\Events\AfterUpdateProduct;
-use Bigperson\Exchange1C\Events\BeforeProductsSync;
-use Bigperson\Exchange1C\Events\BeforeUpdateProduct;
-use Bigperson\Exchange1C\Exceptions\Exchange1CException;
-use Bigperson\Exchange1C\Interfaces\EventDispatcherInterface;
-use Bigperson\Exchange1C\Interfaces\GroupInterface;
-use Bigperson\Exchange1C\Interfaces\ModelBuilderInterface;
-use Bigperson\Exchange1C\Interfaces\ProductInterface;
+use Sv1fT\Exchange1C\Config;
+use Sv1fT\Exchange1C\Events\AfterProductsSync;
+use Sv1fT\Exchange1C\Events\AfterUpdateProduct;
+use Sv1fT\Exchange1C\Events\BeforeProductsSync;
+use Sv1fT\Exchange1C\Events\BeforeUpdateProduct;
+use Sv1fT\Exchange1C\Exceptions\Exchange1CException;
+use Sv1fT\Exchange1C\Interfaces\EventDispatcherInterface;
+use Sv1fT\Exchange1C\Interfaces\GroupInterface;
+use Sv1fT\Exchange1C\Interfaces\ModelBuilderInterface;
+use Sv1fT\Exchange1C\Interfaces\ProductInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Zenwalker\CommerceML\CommerceML;
 use Zenwalker\CommerceML\Model\Product;

@@ -1,9 +1,9 @@
 # PHP exchange1c - обмен 1С предприятие с сайтом на php
-[![Packagist](https://img.shields.io/packagist/l/bigperson/exchange1c.svg?style=flat-square)](LICENSE)
-[![Packagist](https://img.shields.io/packagist/dt/bigperson/exchange1c.svg?style=flat-square)](https://packagist.org/packages/bigperson/exchange1c)
-[![Packagist](https://img.shields.io/packagist/v/bigperson/exchange1c.svg?style=flat-square)](https://packagist.org/packages/bigperson/exchange1c)
-[![Travis (.org)](https://img.shields.io/travis/bigperson/exchange1c.svg?style=flat-square)](https://travis-ci.org/bigperson/exchange1c)
-[![Codecov](https://img.shields.io/codecov/c/github/bigperson/exchange1c.svg?style=flat-square)](https://codecov.io/gh/bigperson/exchange1c)
+[![Packagist](https://img.shields.io/packagist/l/Sv1fT/exchange1c.svg?style=flat-square)](LICENSE)
+[![Packagist](https://img.shields.io/packagist/dt/Sv1fT/exchange1c.svg?style=flat-square)](https://packagist.org/packages/Sv1fT/exchange1c)
+[![Packagist](https://img.shields.io/packagist/v/Sv1fT/exchange1c.svg?style=flat-square)](https://packagist.org/packages/Sv1fT/exchange1c)
+[![Travis (.org)](https://img.shields.io/travis/Sv1fT/exchange1c.svg?style=flat-square)](https://travis-ci.org/Sv1fT/exchange1c)
+[![Codecov](https://img.shields.io/codecov/c/github/Sv1fT/exchange1c.svg?style=flat-square)](https://codecov.io/gh/Sv1fT/exchange1c)
 [![StyleCI](https://github.styleci.io/repos/153751681/shield?branch=master)](https://github.styleci.io/repos/153751681)
 
 
@@ -23,12 +23,12 @@
 * symfony/http-foundation ^4.1
 
 # Установка
-`composer require bigperson/exchange1c`
+`composer require Sv1fT/exchange1c`
 
 # Использование
 Для использования библиотеки вам неободимо определить массив конфигов и реализовать интерфейсы в ваших моделях.
-В примере используется адаптер для symfony/event-dispatcher - https://github.com/bigperson/exchange1c-symfony-bridge
-Также вы можете использовать пакет-адаптер для интеграции с Laravel https://github.com/bigperson/laravel-exchange1c
+В примере используется адаптер для symfony/event-dispatcher - https://github.com/Sv1fT/exchange1c-symfony-bridge
+Также вы можете использовать пакет-адаптер для интеграции с Laravel https://github.com/Sv1fT/laravel-exchange1c
 
 ```php
 require_once './../vendor/autoload.php'; //Подулючаем автолоад
@@ -41,22 +41,22 @@ $configValues = [
     'use_zip'       => false,
     'file_part' => 0,
     'models'    => [
-        \Bigperson\Exchange1C\Interfaces\GroupInterface::class => \Tests\Models\GroupTestModel::class,
-        \Bigperson\Exchange1C\Interfaces\ProductInterface::class => \Tests\Models\ProductTestModel::class,
-        \Bigperson\Exchange1C\Interfaces\OfferInterface::class => \Tests\Models\OfferTestModel::class,
+        \Sv1fT\Exchange1C\Interfaces\GroupInterface::class => \Tests\Models\GroupTestModel::class,
+        \Sv1fT\Exchange1C\Interfaces\ProductInterface::class => \Tests\Models\ProductTestModel::class,
+        \Sv1fT\Exchange1C\Interfaces\OfferInterface::class => \Tests\Models\OfferTestModel::class,
     ],
 ];
-$config = new \Bigperson\Exchange1C\Config($configValues);
+$config = new \Sv1fT\Exchange1C\Config($configValues);
 $request = \Symfony\Component\HttpFoundation\Request::createFromGlobals();
 $symfonyDispatcher = new \Symfony\Component\EventDispatcher\EventDispatcher();
-$dispatcher = new \Bigperson\Exchange1C\SymfonyEventDispatcher($symfonyDispatcher);
-$modelBuilder = new \Bigperson\Exchange1C\ModelBuilder();
+$dispatcher = new \Sv1fT\Exchange1C\SymfonyEventDispatcher($symfonyDispatcher);
+$modelBuilder = new \Sv1fT\Exchange1C\ModelBuilder();
 // Создаем необходимые сервисы
-$loaderService = new \Bigperson\Exchange1C\Services\FileLoaderService($request, $config);
-$authService = new \Bigperson\Exchange1C\Services\AuthService($request, $config);
-$categoryService = new \Bigperson\Exchange1C\Services\CategoryService($request, $config, $dispatcher, $modelBuilder);
-$offerService = new \Bigperson\Exchange1C\Services\OfferService($request, $config, $dispatcher, $modelBuilder);
-$catalogService = new \Bigperson\Exchange1C\Services\CatalogService($request, $config, $authService, $loaderService, $categoryService, $offerService);
+$loaderService = new \Sv1fT\Exchange1C\Services\FileLoaderService($request, $config);
+$authService = new \Sv1fT\Exchange1C\Services\AuthService($request, $config);
+$categoryService = new \Sv1fT\Exchange1C\Services\CategoryService($request, $config, $dispatcher, $modelBuilder);
+$offerService = new \Sv1fT\Exchange1C\Services\OfferService($request, $config, $dispatcher, $modelBuilder);
+$catalogService = new \Sv1fT\Exchange1C\Services\CatalogService($request, $config, $authService, $loaderService, $categoryService, $offerService);
 
 
 $mode = $request->get('mode');

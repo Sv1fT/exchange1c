@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -9,10 +9,10 @@ declare(strict_types=1);
 
 namespace Tests\Services;
 
-use Bigperson\Exchange1C\Config;
-use Bigperson\Exchange1C\Interfaces\EventDispatcherInterface;
-use Bigperson\Exchange1C\ModelBuilder;
-use Bigperson\Exchange1C\Services\OfferService;
+use Sv1fT\Exchange1C\Config;
+use Sv1fT\Exchange1C\Interfaces\EventDispatcherInterface;
+use Sv1fT\Exchange1C\ModelBuilder;
+use Sv1fT\Exchange1C\Services\OfferService;
 use Symfony\Component\HttpFoundation\Request;
 use Tests\TestCase;
 
@@ -23,9 +23,9 @@ class OfferServiceTest extends TestCase
         $configValues = [
             'import_dir' => __DIR__.'/../xml',
             'models'     => [
-                \Bigperson\Exchange1C\Interfaces\GroupInterface::class   => \Tests\Models\GroupTestModel::class,
-                \Bigperson\Exchange1C\Interfaces\ProductInterface::class => \Tests\Models\ProductTestModel::class,
-                \Bigperson\Exchange1C\Interfaces\OfferInterface::class   => \Tests\Models\OfferTestModel::class,
+                \Sv1fT\Exchange1C\Interfaces\GroupInterface::class   => \Tests\Models\GroupTestModel::class,
+                \Sv1fT\Exchange1C\Interfaces\ProductInterface::class => \Tests\Models\ProductTestModel::class,
+                \Sv1fT\Exchange1C\Interfaces\OfferInterface::class   => \Tests\Models\OfferTestModel::class,
             ],
         ];
 

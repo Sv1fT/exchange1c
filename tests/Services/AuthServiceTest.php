@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -9,9 +9,9 @@ declare(strict_types=1);
 
 namespace Tests\Services;
 
-use Bigperson\Exchange1C\Config;
-use Bigperson\Exchange1C\Exceptions\Exchange1CException;
-use Bigperson\Exchange1C\Services\AuthService;
+use Sv1fT\Exchange1C\Config;
+use Sv1fT\Exchange1C\Exceptions\Exchange1CException;
+use Sv1fT\Exchange1C\Services\AuthService;
 use Illuminate\Contracts\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\ServerBag;

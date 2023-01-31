@@ -1,16 +1,16 @@
 <?php
 /**
- * This file is part of bigperson/exchange1c package.
+ * This file is part of Sv1fT/exchange1c package.
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 declare(strict_types=1);
 
-namespace Bigperson\Exchange1C\Services;
+namespace Sv1fT\Exchange1C\Services;
 
-use Bigperson\Exchange1C\Config;
-use Bigperson\Exchange1C\Exceptions\Exchange1CException;
+use Sv1fT\Exchange1C\Config;
+use Sv1fT\Exchange1C\Exceptions\Exchange1CException;
 use Illuminate\Contracts\Session\Session;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -104,12 +104,6 @@ class AuthService
 
     private function setSession(): void
     {
-        if (!$this->request->getSession()) {
-            $session = new \Symfony\Component\HttpFoundation\Session\Session();
-            $session->start();
-            $this->request->setSession($session);
-        }
-
-        $this->session = $this->request->getSession();
+        $this->session = $this->request->session();
     }
 }
