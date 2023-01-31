@@ -1,5 +1,5 @@
 {
-  "name": "bigperson/exchange1c",
+  "name": "Sv1fT/exchange1c",
   "type": "library",
   "description": "Catalog Loader from 1c - CommerceML protocol",
   "keywords": [
@@ -8,18 +8,18 @@
     "1c-exchange",
     "1c-php"
   ],
-  "homepage": "https://github.com/bigperson",
+  "homepage": "https://github.com/Sv1fT",
   "license": "MIT",
   "authors": [
     {
-      "name": "Anton Kartsev",
+      "name": "Dmitry Osonov",
       "role": "Developer"
     }
   ],
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Bigperson\\Exchange1C\\": "src/"
+      "Sv1fT\\Exchange1C\\": "src/"
     }
   },
   "autoload-dev": {
