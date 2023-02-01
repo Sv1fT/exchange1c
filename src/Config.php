@@ -91,7 +91,7 @@ class Config
      */
     public function getLogin(): string
     {
-        return $this->login;
+        return config('exchange1c.login');
     }
 
     /**
@@ -99,7 +99,7 @@ class Config
      */
     public function getPassword(): string
     {
-        return $this->password;
+        return config('exchange1c.password');
     }
 
     /**
