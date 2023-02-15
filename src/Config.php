@@ -17,7 +17,7 @@ class Config
     /**
      * @var string
      */
-    private $importDir = 'import_dir';
+    private $importDir = 'import_files';
 
     /**
      * @var string

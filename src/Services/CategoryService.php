@@ -180,7 +180,7 @@ class CategoryService
     {
         $images = $product->getImages();
         foreach ($images as $image) {
-            $path = $this->config->getFullPath(basename($image->path));
+            $path = $this->config->getFullPath($image->path);
             if (file_exists($path)) {
                 $model->addImage1c($path, $image->caption);
             }
