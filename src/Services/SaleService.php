@@ -2,7 +2,9 @@
 
 namespace Sv1fT\Exchange1C\Services;
 
-class SaleService extends AbstractService
+use Sv1fT\Exchange1C\Interfaces\CatalogInterface;
+
+class SaleService extends AbstractService implements CatalogInterface
 {
 
     /**
@@ -61,5 +63,10 @@ class SaleService extends AbstractService
     public function query()
     {
 
+    }
+
+    public function import()
+    {
+        // TODO: Implement import() method.
     }
 }

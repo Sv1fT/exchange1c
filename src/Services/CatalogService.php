@@ -9,13 +9,15 @@ declare(strict_types=1);
 
 namespace Sv1fT\Exchange1C\Services;
 
+use Sv1fT\Exchange1C\Interfaces\CatalogInterface;
+
 /**
  * Class Catalog
  * Class for implementing CommerceML protocol
  * http://v8.1c.ru/edi/edi_stnd/90/92.htm
  * http://v8.1c.ru/edi/edi_stnd/131/.
  */
-class CatalogService extends AbstractService
+class CatalogService extends AbstractService implements CatalogInterface
 {
     /**
      * Начало сеанса
@@ -108,5 +110,10 @@ class CatalogService extends AbstractService
         $response .= 'timestamp='.time();
 
         return $response;
+    }
+
+    public function query()
+    {
+        // TODO: Implement query() method.
     }
 }
