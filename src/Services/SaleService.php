@@ -2,7 +2,12 @@
 
 namespace Sv1fT\Exchange1C\Services;
 
+use App\Models\Order;
+use Illuminate\Support\Str;
+use Orchid\Platform\Models\User;
 use Sv1fT\Exchange1C\Interfaces\CatalogInterface;
+use Sv1fT\LaravelExchange1C\Models\Product;
+use Zenwalker\CommerceML\CommerceML;
 
 class SaleService extends AbstractService implements CatalogInterface
 {
@@ -62,11 +67,13 @@ class SaleService extends AbstractService implements CatalogInterface
 
     public function query()
     {
+        $orders = Order::with('user','products', 'offer')->get();
 
+        return response()->view('orders.xml', compact('orders'))->header('Content-Type', 'text/xml');
     }
 
     public function import()
     {
-        // TODO: Implement import() method.
+        return 'success';
     }
 }
