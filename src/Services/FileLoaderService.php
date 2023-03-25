@@ -60,7 +60,9 @@ class FileLoaderService
                 $zip->open($filePath);
                 $zip->extractTo($this->config->getImportDir());
                 $zip->close();
-                unlink($filePath);
+                if(file_exists($filePath)){
+                    unlink($filePath);
+                }
             }
 
             return "success\n";
